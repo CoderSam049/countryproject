@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,600,800" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="script.js" type="module" defer></script>
+</head>
+
+<body>
+    <header>
+   
+        <nav class="header">
+            <h1>Where in the World</h1>
+             <p class="lightmode"><i class="fa-solid fa-sun"></i>&nbsp;&nbsp; Light Mode</p>
+            <p class="darkmode"><i class="fa-sharp fa-regular fa-moon"></i>&nbsp;&nbsp; Dark Mode</p>
+           
+        </nav>
+    </header>
+
+    <main class="hero-section">
+        <div class="search-container">
+            <div class="inputbox">
+                <i class="fa-solid fa-magnifying-glass ">&nbsp;&nbsp;</i>
+                <input type="text" placeholder="search  for a country..">
+    
+            </div>
+            <div class="newfilterbox">
+            <div class="filterbox">   
+                <p>filter by region &nbsp;&nbsp; <i class="fa-solid fa-angle-down arrow"></i></p>
+            </div>
+
+            <div class="filterbox filterboxlist">
+                <p class="region" id="Africa">Africa</p>
+                <p class="region" id="America">Ameraica</p>
+                <p class="region" id="eUrope">eUrope</p>
+                <p class="region" id="Asia">Asia</p>
+                <p class="region" id="oceania">oceania</p>
+            </div>
+
+            </div>
+        </div>
+
+        <div class="inputsection"></div>
+        <div class="contary-container">
+            <section id="countryboxes">
+            </section>
+
+        </div>
+    </main>
+</body>
+
+</html>

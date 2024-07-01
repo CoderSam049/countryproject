@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>county-details</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,600,800" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="country.js" defer></script>
+    <style>
+        .newcontainer {
+            max-width: 1300px;
+            margin-inline: auto;
+            padding: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 4px;
+            border: none;
+            margin: 8px;  display:inline-block ;
+            cursor: pointer;
+            transition: linear 0.2s;
+            background-color: inherit;
+            color: inherit;
+            text-decoration: none;
+            border: 1px solid rgba(99, 73, 73, 0.229);
+    
+        }
+        .back{
+            margin-bottom: 2rem;
+        }
+
+        .btn:hover {
+            background-color: green;
+        }
+
+        .countryimg {
+            max-width: 300px; 
+        }
+
+        .countryimg img {
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid black;
+            
+        }
+
+        .country-details-flex {
+            display: flex;
+        
+        }
+
+        .country-details b {
+          
+            line-height: 2;
+        }
+
+        .country-details-gap {
+            margin-inline: 5rem;
+        }
+
+        .allcountry {
+            display: flex;
+            align-items: center;
+  
+        }
+         h2{
+           margin-bottom: 1rem;
+        }
+
+        .butt {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .bordercountry{
+
+            max-width: 400px;
+            margin-top: 1rem;
+            margin-left: 0.9rem;
+     
+        }
+
+
+        @media(max-width:892px) {
+            .country-details-flex {
+                display: flex;
+                flex-direction: column;
+
+            }
+            .allcountry {
+ 
+            flex-wrap: wrap;
+        }
+           
+            .allcountry {
+                margin-top: 1.5rem;
+            }
+         .country-details-gap {
+            margin-left: 0.7rem;
+        }
+      
+
+        }
+
+        @media(max-width:502px) {
+            .allcountry {
+                align-items: start;
+            }
+            .country-details-gap {
+                margin-inline: 1rem;
+                margin-bottom: 1rem;
+            }
+            .country-details-flex {
+                align-items: start;
+  
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+   
+    
+        <header>
+   
+            <nav class="header">
+                <h1>Where in the World</h1>
+                 <p class="lightmode"><i class="fa-solid fa-sun"></i>&nbsp;&nbsp; Light Mode</p>
+                <p class="darkmode"><i class="fa-sharp fa-regular fa-moon"></i>&nbsp;&nbsp; Dark Mode</p>
+               
+            </nav>
+        </header>
+
+    <div class="newcontainer">
+        <button onclick="btnclick()" class="btn back" >
+            <i class="fa-solid fa-arrow-left"></i> &nbsp;Back
+        </button>
+
+        <div class="country-details-flex">
+            <div class="countryimg">
+                <img src="skeleton.png" alt="country" />
+            </div>
+
+            <div class="butt">
+                <div class="allcountry">
+                    <div class="country-details country-details-gap">
+                        <h2 class="countryh2"></h2>
+                        <p><b>Native Name:</b> &nbsp;&nbsp;<span></span></p>
+                        <p><b>population:</b> &nbsp;&nbsp;<span> </span></p>
+                        <p><b>region:</b> &nbsp;&nbsp;<span></span></p>
+                        <p><b>sub-region:</b>&nbsp;&nbsp; <span></span></p>
+                        <p><b>capital:</b> &nbsp;&nbsp;<span></span></p>
+                    </div>
+                    <div class="country-details">
+                        <p><b>top level domain:</b> &nbsp;&nbsp;<span> </span></p>
+                        <p><b>currencies:</b> &nbsp;&nbsp;<span> </span></p>
+                        <p><b>language:</b> &nbsp;&nbsp;<span></span></p>
+
+                    </div>
+
+                </div>
+                <div class="bordercountry">
+                    <h3>border countries: </h3> 
+                      
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function btnclick() {
+            // location.href = 'http://127.0.0.1:3000/makeweb/index.html';
+            history.back()
+        }
+    
+    </script>
+</body>
+
+</html>
