@@ -160,6 +160,7 @@ header {
     background-color:   hsl(207, 26%, 17%);
     --main-color: rgb(255, 255, 255);
     /* color:  hsl(209, 23%, 22%); */
+    transition: 0.5s;
     --countrybackground:hsl(209, 23%, 22%);
     --inputbg: hsl(0, 0%, 52%);
     cursor: pointer;
