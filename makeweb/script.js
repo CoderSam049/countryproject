@@ -1,5 +1,4 @@
 const contrycard = document.querySelector("#countryboxes");
-
 const regions = document.querySelectorAll(".region");
 const inputbox = document.querySelector(".inputbox input");
 
@@ -29,8 +28,6 @@ function filtercard(data) {
 }
 
 
-
-
 //default country view
 let allcountrydats = fetch("https://restcountries.com/v3.1/all")
   .then((res) => res.json())
@@ -42,7 +39,7 @@ let allcountrydats = fetch("https://restcountries.com/v3.1/all")
 
 //select filter view  
 regions.forEach((data) => {
-  console.log(data.id);
+
   data.addEventListener("click", () => {
     fetch(`https://restcountries.com/v3.1/region/${data.id}`)
       .then((res) => res.json())
@@ -70,6 +67,8 @@ document.body.addEventListener("click", () => {
 
 
 
+
+
 inputbox.addEventListener('input', (e) => {
   let contrysearch = e.target.value;
 
@@ -85,15 +84,42 @@ const lightmode = document.querySelector(".lightmode");
 const darkmode = document.querySelector(".darkmode");
 
 
-lightmode.addEventListener('click',()=>{
+let local= true;
+
+
+  lightmode.addEventListener('click',()=>{
+    getlighmode()
+  
+  })
+
+  darkmode.addEventListener('click',()=>{
+    getdarkmode()
+  })
+  
+   
+function getlighmode(){
   document.body.classList.add("mode");
   darkmode.style.display= 'block'
   lightmode.style.display= 'none'
+  local=false
+  localStorage.setItem('lightmodeon', local)
+}
 
-})
 
-darkmode.addEventListener('click',()=>{
-  document.body.classList.remove("mode");
-  darkmode.style.display= 'none'
-  lightmode.style.display= 'block'
-})
+function getdarkmode(){
+    document.body.classList.remove("mode");
+    darkmode.style.display= 'none'
+    lightmode.style.display= 'block'
+    local=true
+    localStorage.setItem('lightmodeon', local)
+}
+
+
+
+
+
+if (JSON.parse(localStorage.getItem('lightmodeon'))) {
+    getdarkmode();
+} else {
+    getlighmode();
+}
